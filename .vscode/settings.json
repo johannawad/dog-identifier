@@ -1,0 +1,25 @@
+{
+  "bashBeautify.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "eslint.codeAction.disableRuleComment": {
+    "enable": true,
+    "location": "sameLine"
+  },
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.enable": true,
+  "eslint.lintTask.enable": true,
+  "eslint.options": {
+    "resolvePluginsRelativeTo": "./node_modules/@ridedott/eslint-config"
+  },
+  "eslint.run": "onType",
+  "files.associations": {
+    "*.css": "postcss"
+  },
+  "typescript.tsdk": "./node_modules/typescript/lib"
+}

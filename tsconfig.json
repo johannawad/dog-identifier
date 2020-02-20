@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "charset": "utf-8",
+    "declaration": false,
+    "declarationMap": false,
+    "importHelpers": true,
+    "lib": ["DOM", "DOM.Iterable", "ES2019"],
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "pretty": true,
+    "rootDir": "src",
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "es2019",
+    "typeRoots": ["./@types", "node_modules/@types"],
+    "experimentalDecorators": true,
+    "incremental": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "tsBuildInfoFile": "./.cache/typescript"
+  },
+  "files": ["./src/index.ts"],
+  "include": ["./**/*"]
+}
