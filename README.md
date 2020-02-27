@@ -1,6 +1,6 @@
-# Frontend Assignment Boilerplate
+# Front End Assignment Boilerplate
 
-This project can serve as a baseline for your frontend assignment. Take some
+This project can serve as a baseline for your front end assignment. Take some
 time to familiarize yourself with the structure, configuration and scripts.
 Depending on how you choose to implement your solution you may find that you
 need to delete or change parts of this base setup — feel free to do so. We have
