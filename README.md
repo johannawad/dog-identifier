@@ -2,7 +2,7 @@
 
 This project is a web application that identifies dogs based on an uploaded
 picture. The application is developed in React with the use of some libraries
-such as styled-components,
+such as styled-components, lazy-loader and react-infinite-scroll-component.
 
 ## Available scripts
 
