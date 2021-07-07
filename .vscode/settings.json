@@ -12,7 +12,6 @@
   "eslint.codeAction.showDocumentation": {
     "enable": true
   },
-  "eslint.enable": true,
   "eslint.lintTask.enable": true,
   "eslint.options": {
     "resolvePluginsRelativeTo": "./node_modules/@ridedott/eslint-config"
@@ -21,5 +20,7 @@
   "files.associations": {
     "*.css": "postcss"
   },
-  "typescript.tsdk": "./node_modules/typescript/lib"
+  "eslint.validate": ["javascript", "typescript"],
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "terminal.integrated.fontFamily": "Source Code Pro for Powerline"
 }

@@ -16,13 +16,20 @@ const configuration = {
     overlay: true,
     writeToDisk: false,
   },
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'cheap-module-source-map',
   entry: {
-    app: './src/index.ts',
+    app: './src/index.tsx',
   },
   mode: 'development',
   module: {
     rules: [
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
       {
         loader: 'html-loader',
         options: {
@@ -97,7 +104,7 @@ const configuration = {
     }),
   ],
   resolve: {
-    extensions: ['.js', '.ts'],
+    extensions: ['.js', '.ts', '.tsx'],
     mainFields: ['browser', 'module', 'main'],
   },
   watch: true,

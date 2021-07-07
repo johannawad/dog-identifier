@@ -2,7 +2,8 @@ env:
   browser: true
   es6: true
   node: true
-extends: '@ridedott/eslint-config'
+extends:
+  - '@ridedott/eslint-config'
 overrides:
   - files: ./src/**/*spec.ts
     rules:
@@ -14,6 +15,12 @@ parserOptions:
 rules:
   immutable/no-mutation: 'off'
   immutable/no-this: 'off'
-  unicorn/filename-case:
-    - error
-    - case: kebabCase
+  unicorn/filename-case: 'off'
+  '@typescript-eslint/explicit-function-return-type': 'off'
+  '@typescript-eslint/typedef': 'off'
+  '@typescript-eslint/promise-function-async': 'off'
+  'react/prop-types': 'off'
+  'unicorn/prevent-abbreviations': 'off'
+settings:
+  react:
+    version: 'detect'

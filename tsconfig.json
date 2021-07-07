@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "jsx": "react",
+    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
     "charset": "utf-8",
@@ -24,6 +26,7 @@
     "sourceMap": true,
     "tsBuildInfoFile": "./.cache/typescript"
   },
-  "files": ["./src/index.ts"],
+  "files": ["src/index.ts"],
+  "exclude": ["**/**.html"],
   "include": ["./**/*"]
 }
