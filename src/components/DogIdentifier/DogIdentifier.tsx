@@ -1,5 +1,5 @@
 import * as mobilenet from '@tensorflow-models/mobilenet';
-import { tensor, Tensor3D } from '@tensorflow/tfjs';
+import { Tensor3D } from '@tensorflow/tfjs';
 import React, {
   ReactElement,
   useEffect,

@@ -21,6 +21,5 @@
     "*.css": "postcss"
   },
   "eslint.validate": ["javascript", "typescript"],
-  "typescript.tsdk": "./node_modules/typescript/lib",
-  "terminal.integrated.fontFamily": "Source Code Pro for Powerline"
+  "typescript.tsdk": "./node_modules/typescript/lib"
 }

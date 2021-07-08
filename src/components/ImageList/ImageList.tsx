@@ -1,5 +1,6 @@
 import React, { ReactElement, useEffect } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
+
 import LazyImage from '../LazyImage/LazyImage';
 
 interface ImageListProps {
@@ -12,28 +13,43 @@ const ImageList: React.FC<ImageListProps> = ({ breed }): ReactElement => {
 
   const fetchImages = (): void => {
     fetch(`https://dog.ceo/api/breed/${breed.toLowerCase()}/images/random/3`)
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        }
+
+        setError(null);
+
+        return response.json();
+      })
       .then(response => setImages([...images, ...response.message]))
-      .catch((error_): void => setError(error_));
+      .catch(error_ =>
+        setError(`An error occured getting images ${error_.message}`),
+      );
   };
 
   useEffect(() => {
     fetchImages();
   }, []);
 
-  return !error ? (
-    <InfiniteScroll
-      dataLength={images.length}
-      next={fetchImages}
-      hasMore={true}
-      loader={<h4>Loading...</h4>}
-    >
-      {images.map((image, index) => (
-        <LazyImage key={index} src={image} alt={`Random image ${image}`} />
-      ))}
-    </InfiniteScroll>
-  ) : (
-    <h1>{error}</h1>
+  return (
+    <div>
+      {error ? (
+        <h1>{error}</h1>
+      ) : (
+        <InfiniteScroll
+          dataLength={images.length}
+          next={fetchImages}
+          hasMore={true}
+          loader={<h4>Loading...</h4>}
+        >
+          {images.map((image, index) => (
+            <LazyImage key={index} src={image} alt={`Random image ${image}`} />
+          ))}
+        </InfiniteScroll>
+      )}
+      ;
+    </div>
   );
 };
 
